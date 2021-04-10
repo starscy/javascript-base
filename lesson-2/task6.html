@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arg1 = 2;
+        var arg2 = 4;
+        var operation = 'mult';
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case 'sum':
+                    return (arg1 + arg2);
+                case 'sub':
+                    return (arg1 - arg2);
+                case 'mult':
+                    return (arg1 * arg2);
+                case 'div':
+                    return (arg1 / arg2);
+            }
+        }
+
+        alert(mathOperation(arg1, arg2, operation));
+    </script>
+</body>
+
+</html>
