@@ -1,0 +1,29 @@
+<meta charset='UTF-8'>
+<script>
+    function numToObj(num) {
+        let arrNumber = num.split('');
+        while (arrNumber.length < 3) {
+            arrNumber.unshift(0);
+        }
+        let objectNumber = {};
+        if (arrNumber.length > 3) {
+            return null;
+        }
+        else {
+            objectNumber['единицы'] = arrNumber[2];
+            objectNumber['десятки'] = arrNumber[1];
+            objectNumber['сотни'] = arrNumber[0];
+            return objectNumber;
+        }
+    }
+
+    let userNumber = prompt("Введите число от 0 до 999");
+    let obj = numToObj(userNumber);
+    if (obj == null) {
+        console.log("Пустой объект");
+    }
+    else {
+        console.log(obj)
+    }
+
+</script>
