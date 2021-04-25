@@ -22,8 +22,15 @@ function openImage(event) {
     const image = document.createElement("img");
 
     /* Проверка наличия картинки по указанному в src адресу. */
-       image.onload = function(){alert('картинка существует')};
-    image.onerror = function(){alert('картинка не существует')};
+    image.addEventListener('load', function () {
+        console.log('картинка существует');
+    });
+      
+    image.addEventListener('error', function () {
+        console.log('картинка не существует')
+    });
+
+
     
     /* добавляем атрибуты к картинке */
     image.id  = `image-${seed}`;
